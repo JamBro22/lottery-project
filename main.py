@@ -1,3 +1,9 @@
+# import modules
+import sys
+
+from user_functions import get_user_age, is_older_than_18
+
+
 # call all functions in main
 def main():
     # display welcome message
@@ -5,8 +11,20 @@ def main():
     print(welcome_message)
 
     # step 1: get user age
+    user_age = get_user_age()
+
     # step 2: determine whether user is old enough to play (>=18)
-    # step 3: allow user to pick numbers and add to user number list without duplicates
+    is_old_enough = is_older_than_18(user_age)
+
+    if not is_old_enough:
+        message_for_ineligible_players = """
+        You are not eligible to play Ithuba National Lottery. Players must be 18 years or older
+        """
+        sys.exit(message_for_ineligible_players)
+
+    # step 3: if old enough, allow user to pick numbers and add to user number list without duplicates
+    print("You are eligible tp play. Have fun")
+
     # step 4: generate a list of random numbers without duplicates
     # step 5: compare user number list to randomly generated list and return amount of matched numbers
     # step 6: display both lists, the amount of numbers matched and the prize won
