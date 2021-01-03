@@ -1,10 +1,12 @@
 # import built-in modules and functions
 import sys
+from datetime import date
 
 # import user-defined modules and functions
 from user_functions import get_user_age, is_older_than_18, get_user_numbers
 from random_numbers import generate_random_numbers_list
 from general_functions import get_amount_of_matched_numbers, get_prize
+from file_handling import add_data_to_file
 
 
 # call all functions in main
@@ -29,22 +31,28 @@ You are not eligible to play Ithuba National Lottery. Players must be 18 years o
     print("\nYou are eligible to play Ithuba National Lottery.\n")
     # allow user to add 6 numbers from 1 to 49
     user_number_list = get_user_numbers(6, 1, 49)
-    print("Your numbers are:", user_number_list)
+    user_numbers = "Your numbers are: {}".format(user_number_list)
+    print(user_numbers)
 
     # step 4: generate a list of random numbers without duplicates
     # generates 6 random numbers from 1 to 49
     random_numbers_list = generate_random_numbers_list(6, 1, 49)
-    print("The lotto results are:", random_numbers_list)
+    random_numbers = "The lotto results are: {}".format(random_numbers_list)
+    print(random_numbers)
 
     # step 5: compare user number list to randomly generated list and return amount of matched numbers
     matched_numbers = get_amount_of_matched_numbers(user_number_list, random_numbers_list)
-    print("You have matched {} number[s]".format(matched_numbers))
+    matched_amount = "You have matched {} number[s]".format(matched_numbers)
+    print(matched_amount)
 
     # step 6: display both lists, the amount of numbers matched and the prize won
     prize = get_prize(matched_numbers, [10000000, 8584, 2384, 100.50, 20])
-    print("You have won R{}".format(prize))
+    prize_amount = "You have won R{}".format(prize)
+    print(prize_amount)
 
-    # step 7: write results to text file, along with prize categories
+    # step 7: write results to text file
+    date_today = str(date.today())
+    add_data_to_file("lottery_results.txt", "a", [date_today, user_numbers, random_numbers, matched_amount, prize_amount])
 
 
 # run only from main file

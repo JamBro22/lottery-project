@@ -1,0 +1,10 @@
+2021-01-03
+Your numbers are: [12, 26, 28, 38, 39, 40]
+The lotto results are: [3, 7, 23, 43, 44, 48]
+You have matched 0 number[s]
+You have won R0
+2021-01-03
+Your numbers are: [1, 7, 10, 20, 38, 45]
+The lotto results are: [20, 21, 25, 41, 44, 46]
+You have matched 1 number[s]
+You have won R0
