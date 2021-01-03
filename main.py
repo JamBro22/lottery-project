@@ -28,12 +28,12 @@ You are not eligible to play Ithuba National Lottery. Players must be 18 years o
     # step 3: if old enough, allow user to pick numbers and add to user number list without duplicates
     print("\nYou are eligible to play Ithuba National Lottery.\n")
     # allow user to add 6 numbers from 1 to 49
-    user_number_list = get_user_numbers(6, 1, 10)
+    user_number_list = get_user_numbers(6, 1, 49)
     print(user_number_list)
 
     # step 4: generate a list of random numbers without duplicates
     # generates 6 random numbers from 1 to 49
-    random_numbers_list = generate_random_numbers_list(6, 1, 10)
+    random_numbers_list = generate_random_numbers_list(6, 1, 49)
     print(random_numbers_list)
 
     # step 5: compare user number list to randomly generated list and return amount of matched numbers
