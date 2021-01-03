@@ -79,5 +79,4 @@ def get_prize(matched_numbers, prizes):
     sorted_prizes = selection_sort(prizes)
 
     prize = sorted_prizes[matched_numbers - 2]
-
     return prize
