@@ -1,5 +1,5 @@
 # import user-defined modules
-from general_functions import check_list_for_duplicates
+from general_functions import check_list_for_duplicates, selection_sort
 
 
 # get user age through input
@@ -47,6 +47,6 @@ def get_user_numbers():
             print("Must be a number")
             continue
 
-    user_numbers.sort()
-    return user_numbers
+    user_number_list = selection_sort(user_numbers)
+    return user_number_list
 
