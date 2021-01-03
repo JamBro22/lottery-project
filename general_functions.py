@@ -1,4 +1,4 @@
-# file for common functions used across the programme
+# file for general functions used across the programme
 
 # check a list for duplicates
 def check_list_for_duplicates(item, listed_items):
@@ -60,3 +60,24 @@ def get_amount_of_matched_numbers(list1, list2):
             counter += 1
 
     return counter
+
+
+# get prize based on numbers matched, amount of numbers = amount of numbers in original lists
+def get_prize(matched_numbers, prizes):
+    # check if prizes is a list
+    if type(prizes) is not list:
+        return
+
+    # check if prizes list is empty
+    if len(prizes) == 0:
+        return
+
+    if matched_numbers == 0 or matched_numbers == 1:
+        return 0
+
+    # sort prize values in ascending order
+    sorted_prizes = selection_sort(prizes)
+
+    prize = sorted_prizes[matched_numbers - 2]
+
+    return prize

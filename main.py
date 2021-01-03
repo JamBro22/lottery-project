@@ -4,7 +4,7 @@ import sys
 # import user-defined modules and functions
 from user_functions import get_user_age, is_older_than_18, get_user_numbers
 from random_numbers import generate_random_numbers_list
-from general_functions import get_amount_of_matched_numbers
+from general_functions import get_amount_of_matched_numbers, get_prize
 
 
 # call all functions in main
@@ -41,6 +41,9 @@ You are not eligible to play Ithuba National Lottery. Players must be 18 years o
     print("You have matched {} number[s]".format(matched_numbers))
 
     # step 6: display both lists, the amount of numbers matched and the prize won
+    prize = get_prize(matched_numbers, [10000000, 8584, 2384, 100.50, 20])
+    print("You have won R{}".format(prize))
+
     # step 7: write results to text file, along with prize categories
 
 
