@@ -24,7 +24,7 @@ You are not eligible to play Ithuba National Lottery. Players must be 18 years o
         sys.exit(message_for_ineligible_players)
 
     # step 3: if old enough, allow user to pick numbers and add to user number list without duplicates
-    print("You are eligible tp play Ithuba National Lottery.")
+    print("You are eligible to play Ithuba National Lottery.")
     user_number_list = get_user_numbers()
     print(user_number_list)
 

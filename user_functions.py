@@ -28,20 +28,24 @@ def get_user_numbers():
 
     i = 1
     while i <= 6:
-        number = int(input("Please enter a number from 1 to 49: "))
+        try:
+            number = int(input("Please enter a number from 1 to 49: "))
 
-        is_duplicated = check_list_for_duplicates(number, user_numbers)
+            is_duplicated = check_list_for_duplicates(number, user_numbers)
 
-        if is_duplicated:
-            print("Number already chosen")
+            if is_duplicated:
+                print("Number already chosen")
+                continue
+
+            if 1 > number or number > 49:
+                print("Number must be from 1 to 49")
+                continue
+
+            i += 1
+            user_numbers.append(number)
+        except ValueError:
+            print("Must be a number")
             continue
-
-        if 1 > number or number > 49:
-            print("Number must be from 1 to 49")
-            continue
-
-        i += 1
-        user_numbers.append(number)
 
     user_numbers.sort()
     return user_numbers
