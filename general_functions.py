@@ -41,3 +41,22 @@ def selection_sort(listed_items):
                 listed_items[i], listed_items[minimum] = listed_items[minimum], listed_items[i]
 
     return listed_items
+
+
+# get amount of matched numbers from two lists
+def get_amount_of_matched_numbers(list1, list2):
+    counter = 0
+
+    # check if lists present
+    if type(list1) is not list or type(list2) is not list:
+        return
+
+    # check if lists empty
+    if len(list1) == 0 or len(list2) == 0:
+        return
+
+    for i in range(len(list1)):
+        if list1[i] in list2:
+            counter += 1
+
+    return counter
