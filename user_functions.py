@@ -43,7 +43,6 @@ def get_user_numbers():
         i += 1
         user_numbers.append(number)
 
-    return user_numbers.sort()
+    user_numbers.sort()
+    return user_numbers
 
-
-print(get_user_numbers())
