@@ -1,6 +1,7 @@
-# import modules
+# import built-in modules and functions
 import sys
 
+# import user-defined modules and functions
 from user_functions import get_user_age, is_older_than_18
 
 
@@ -18,7 +19,7 @@ def main():
 
     if not is_old_enough:
         message_for_ineligible_players = """
-        You are not eligible to play Ithuba National Lottery. Players must be 18 years or older
+You are not eligible to play Ithuba National Lottery. Players must be 18 years or older
         """
         sys.exit(message_for_ineligible_players)
 
