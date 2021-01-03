@@ -6,18 +6,18 @@ from general_functions import check_list_for_duplicates, selection_sort
 
 
 # generate and return a random number
-def get_random_number():
-    number = random.randint(1, 49)
+def get_random_number(starting_number, ending_number):
+    number = random.randint(starting_number, ending_number)
     return number
 
 
 # generate a list of random numbers without duplicates
-def generate_random_numbers_list():
+def generate_random_numbers_list(amount_of_numbers, starting_number, ending_number):
     random_numbers = []
 
     i = 1
-    while i <= 6:
-        number = random.randint(1, 49)
+    while i <= amount_of_numbers:
+        number = get_random_number(starting_number, ending_number)
 
         is_duplicated = check_list_for_duplicates(number, random_numbers)
 

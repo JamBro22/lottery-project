@@ -23,13 +23,13 @@ def is_older_than_18(age):
 
 
 # return a list of non-duplicated user chosen numbers
-def get_user_numbers():
+def get_user_numbers(amount_of_numbers, starting_number, ending_number):
     user_numbers = []
 
     i = 1
-    while i <= 6:
+    while i <= amount_of_numbers:
         try:
-            number = int(input("Please enter a number from 1 to 49: "))
+            number = int(input("Please enter a number from {} to {}: ".format(starting_number, ending_number)))
 
             is_duplicated = check_list_for_duplicates(number, user_numbers)
 
@@ -37,8 +37,8 @@ def get_user_numbers():
                 print("Number already chosen")
                 continue
 
-            if 1 > number or number > 49:
-                print("Number must be from 1 to 49")
+            if starting_number > number or number > ending_number:
+                print("Number must be from {} to {}".format(starting_number, ending_number))
                 continue
 
             i += 1
