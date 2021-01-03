@@ -3,6 +3,7 @@ import sys
 
 # import user-defined modules and functions
 from user_functions import get_user_age, is_older_than_18, get_user_numbers
+from random_numbers import generate_random_numbers_list
 
 
 # call all functions in main
@@ -24,11 +25,14 @@ You are not eligible to play Ithuba National Lottery. Players must be 18 years o
         sys.exit(message_for_ineligible_players)
 
     # step 3: if old enough, allow user to pick numbers and add to user number list without duplicates
-    print("You are eligible to play Ithuba National Lottery.")
+    print("\nYou are eligible to play Ithuba National Lottery.\n")
     user_number_list = get_user_numbers()
     print(user_number_list)
 
     # step 4: generate a list of random numbers without duplicates
+    random_numbers_list = generate_random_numbers_list()
+    print(random_numbers_list)
+
     # step 5: compare user number list to randomly generated list and return amount of matched numbers
     # step 6: display both lists, the amount of numbers matched and the prize won
     # step 7: write results to text file, along with prize categories

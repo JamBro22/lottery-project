@@ -39,4 +39,5 @@ def selection_sort(listed_items):
                     minimum = j
             if minimum != i:
                 listed_items[i], listed_items[minimum] = listed_items[minimum], listed_items[i]
-        return listed_items
+
+    return listed_items
